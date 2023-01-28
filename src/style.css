@@ -1,9 +1,60 @@
-h1 {
-	font-family: Proza Libre;
+:root {
+	--primary-color: #29102a;
+	--secondary-color: #fbecec;
+	--color-gradA: #adedd5;
+	--color-gradB: #fbee97;
+	--heading-font: "Proza Libre";
+	--content-font: "Open Sans";
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
 	font-weight: bold;
 }
 
-p {
-	font-family: Open Sans;
-	font-weight: 100;
+h1 {
+	font-size: 56px;
+}
+
+.hero {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	text-align: center;
+	padding: 120px 20px;
+}
+
+.hero p {
+	font-family: var(--content-font);
+	font-size: 20px;
+	line-height: 36px;
+}
+
+button.main-button {
+	margin: 0 10px;
+	width: 175px;
+	border-radius: 1px 15px 1px 15px;
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	color: var(--secondary-color);
+	text-transform: uppercase;
+	box-shadow: 0 0 6px 0 black;
+	border: solid 2px transparent;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0)
+		),
+		linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	box-shadow: 2px 1000px 1px var(--primary-color) inset;
+}
+
+button.main-button:hover {
+	box-shadow: none;
+	color: var(--primary-color);
 }

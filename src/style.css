@@ -19,6 +19,79 @@ h1 {
 	font-size: 56px;
 }
 
+h2,
+h3 {
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+h2 {
+	position: relative;
+	font-weight: 600;
+	font-size: 40px;
+	display: inline;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h2::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	width: 110%;
+	left: 0;
+	height: 10px;
+	background: linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+	clip-path: polygon(
+		0 0,
+		80% 0,
+		100% calc(100% - 1em),
+		calc(100% - 1em) 100%,
+		0 100%
+	);
+}
+
+p {
+	font-family: var(--content-font);
+}
+
+li {
+	font-size: 14px;
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+}
+
+ul {
+	padding: 0;
+}
+
+li i {
+	border: solid 1px var(--primary-color);
+	padding: 2%;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding-top: 7px;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+
+.inner-title {
+	font-size: 22px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+.skills-box {
+	border: solid 1px rgba(211, 211, 211, 0.5);
+	border-radius: 4px;
+	box-shadow: 2px 1px 6px 1px rgba(211, 211, 211, 0.4);
+	padding: 10px 0px 0px 10px;
+}
 .hero {
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
@@ -57,4 +130,34 @@ button.main-button {
 button.main-button:hover {
 	box-shadow: none;
 	color: var(--primary-color);
+}
+
+button.secondary-button {
+	margin: 0 10px;
+	border-radius: 1px 15px 1px 15px;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	padding: 0.5rem 1.5rem;
+	color: var(--primary-color);
+	box-shadow: 0 0 6px 0 black;
+	border: solid 2px transparent;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0)
+		),
+		linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	box-shadow: 2px 1000px 1px white inset;
+}
+
+button.secondary-button:hover {
+	box-shadow: none;
+	color: var(--primary-color);
+}
+
+img {
+	margin: 35px 0 25px 0;
 }

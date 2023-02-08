@@ -247,6 +247,44 @@ a:hover {
 	font-weight: 700;
 }
 
+.color-block {
+	background: linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+	border-radius: 4px;
+	height: 150px;
+	padding-top: 25px;
+}
+
+.color-block p {
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+}
+
+.email-block {
+	background-color: white;
+	border-radius: 2px;
+	padding: 0.5em;
+	margin: 0 10%;
+	text-align: center;
+}
+
+.follow i {
+	border: solid 1px var(--primary-color);
+	border-radius: 50%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+	margin: 0 15px;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+.follow li {
+	font-size: 20px;
+	line-height: 45px;
+}
+
 @media (max-width: 1200px) {
 	li {
 		text-align: center;
@@ -298,5 +336,9 @@ a:hover {
 		padding: 0 12px;
 		max-width: 100px;
 		font-size: 12px;
+	}
+
+	.email-block a {
+		font-size: 13px;
 	}
 }

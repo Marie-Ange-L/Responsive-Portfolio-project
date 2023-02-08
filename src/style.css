@@ -341,4 +341,9 @@ a:hover {
 	.email-block a {
 		font-size: 13px;
 	}
+
+	.follow li {
+		font-size: 16px;
+		line-height: 30px;
+	}
 }

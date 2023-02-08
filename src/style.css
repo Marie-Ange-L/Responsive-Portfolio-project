@@ -3,8 +3,64 @@
 	--secondary-color: #fbecec;
 	--color-gradA: #adedd5;
 	--color-gradB: #fbee97;
+	--bs-nav-link-hover-color: #fbecec;
 	--heading-font: "Proza Libre";
 	--content-font: "Open Sans";
+}
+
+nav {
+	background-color: var(--primary-color);
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+a.nav-link {
+	color: var(--secondary-color);
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 24px;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+}
+
+a.active {
+	font-weight: 600;
+}
+
+a.nav-link:hover {
+	text-decoration: none;
+}
+
+a.nav-link::after {
+	text-decoration: none;
+	color: var(--secondary-color);
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -0.05em;
+	height: 0em;
+	width: 100%;
+	background: linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+	z-index: -1;
+}
+
+a.nav-link:hover::after {
+	color: var(--secondary-color);
+	height: 0.1em;
+	transform-origin: 50% bottom;
+	transform: scaleX(0);
+	transition: transform 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+nav ul {
+	margin: 0;
+}
+nav li {
+	padding: 0;
 }
 
 h1,
@@ -127,6 +183,7 @@ a.main-button {
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	box-shadow: 2px 1000px 1px var(--primary-color) inset;
+	transition: all 0.25s ease-in-out;
 }
 
 a.main-button:hover {
@@ -154,6 +211,7 @@ a.secondary-button {
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	box-shadow: 2px 1000px 1px white inset;
+	transition: all 0.25s ease-in-out;
 }
 
 a.secondary-button:hover {
@@ -167,7 +225,7 @@ a.inactive-button {
 	border-radius: 1px 15px 1px 15px;
 	padding: 1rem;
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: 400;
 	letter-spacing: 0.02em;
 	padding: 0.5rem 1.5rem;
 	color: grey;
@@ -177,7 +235,7 @@ a.inactive-button {
 			rgba(255, 255, 255, 0),
 			rgba(255, 255, 255, 0)
 		),
-		linear-gradient(90deg, #aeaeae, #e4e4e4);
+		linear-gradient(90deg, #cacaca, #f3f3f3);
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	box-shadow: 2px 1000px 1px white inset;
@@ -232,7 +290,7 @@ a:hover {
 .content h1 {
 	color: var(--primary-color);
 	font-size: 56px;
-	padding-bottom: 20px;
+	padding: 50px 0 20px 0;
 }
 
 .content img {
@@ -345,5 +403,12 @@ a:hover {
 	.follow li {
 		font-size: 16px;
 		line-height: 30px;
+	}
+
+	.nav-link {
+		font-size: 12px;
+	}
+	nav li {
+		max-width: 80px;
 	}
 }

@@ -65,8 +65,7 @@ nav li {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
 	font-family: var(--heading-font);
 	font-weight: bold;
 }

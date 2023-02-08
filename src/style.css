@@ -341,6 +341,87 @@ a:hover {
 .follow li {
 	font-size: 20px;
 	line-height: 45px;
+	text-align: center;
+}
+
+.follow a:hover {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+footer {
+	background-color: var(--primary-color);
+}
+
+footer p {
+	color: var(--secondary-color);
+	text-align: center;
+	font-size: 16px;
+	line-height: 25px;
+	padding-top: 30px;
+}
+
+footer ul {
+	margin: 0;
+}
+
+.footer-title {
+	position: relative;
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.footer-title::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	left: 0;
+	height: 2px;
+	background: linear-gradient(90deg, var(--color-gradA), var(--color-gradB));
+}
+
+.footer-follow i {
+	border: solid 1px var(--primary-color);
+	border-radius: 50%;
+	font-size: 25px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	padding-top: 8px;
+	margin: 0 8px;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+.footer-follow li {
+	font-size: 16px;
+	line-height: 35px;
+	max-width: 80px;
+	text-align: center;
+}
+
+.footer-follow a {
+	color: var(--secondary-color);
+}
+
+.footer-follow a:hover {
+	color: var(--secondary-color);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.copyright {
+	font-size: 10px;
+	padding-bottom: 15px;
+}
+
+.copyright a {
+	color: var(--secondary-color);
+}
+.copyright a:hover {
+	text-decoration: none;
+	font-weight: 600;
 }
 
 @media (max-width: 1200px) {
